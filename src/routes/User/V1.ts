@@ -1,12 +1,11 @@
+import { UserController } from "@/controller/User";
 import { Router } from "express";
 
 const UserRouter = Router();
 /**===============================================================
  *      GET Requests
  * ==============================================================*/
-UserRouter.get("/",(req,res)=>{
-    res.json({message:"User V1"})
-})
+UserRouter.get("/",UserController.getUser)
 
 /**===============================================================
  *      POST Requests

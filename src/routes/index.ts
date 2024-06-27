@@ -8,14 +8,14 @@ import { RoutesType } from "@/interface/RoutesType";
 const RoutesV1: RoutesType[] = [
   {
     path: "/user",
-    router: UserRouterV2,
+    router: UserRouterV1,
   },
 ];
 
 const RoutesV2: RoutesType[] = [
   {
     path: "/user",
-    router: UserRouterV1,
+    router: UserRouterV2,
   },
 ];
 const router = Router();
