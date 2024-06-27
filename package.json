@@ -37,11 +37,22 @@
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.3",
+    "module-alias": "^2.2.3",
     "mongoose": "^6.3.3",
     "mongoose-paginate-v2": "^1.4.2",
     "morgan": "^1.10.0",
     "uuid": "^8.3.2",
     "winston": "^3.3.3",
     "zod": "^3.23.8"
+  },
+  "_moduleAliases": {
+    "@/controller": "dist/controllers",
+    "@/service": "dist/services",
+    "@/model": "dist/models",
+    "@/middleware": "dist/middlewares",
+    "@/config": "dist/configs",
+    "@/routes": "dist/routes",
+    "@/provider": "dist/providers",
+    "@/interface": "dist/interfaces"
   }
 }
