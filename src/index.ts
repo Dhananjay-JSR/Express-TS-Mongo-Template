@@ -8,6 +8,8 @@ import {Database} from './providers/Database'
 import Locals from "./providers/Locals";
 // Importing Routes
 import InitRoute from './routes/index'
+import expressJSDocSwagger from 'express-jsdoc-swagger';
+import { SwaggerOption } from './config/Swagger';
 dotenv.config()
 const app = express();
 
@@ -24,6 +26,7 @@ app.get( "/health", async ( req, res ) => {
     return res.status(200).json({message: "Service Running"})
 });
 
+expressJSDocSwagger(app)(SwaggerOption)
 // add this handler before emitting any events
 process.on('uncaughtException', function (err) {
     console.log('UNCAUGHT EXCEPTION - keeping process alive:', err); 
